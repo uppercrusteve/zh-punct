@@ -7,7 +7,7 @@ name = "zh-punct"
 version = "0.1.0"
 description = "中文排版体检：全半角混用、成对符号不闭合、重复标点、省略号破折号写法"
 readme = "README.md"
-requires-python = ">=3.9"
+requires-python = ">=3.10"
 license = { text = "MIT" }
 authors = [{ name = "uppercrusteve" }]
 keywords = ["chinese", "typography", "punctuation", "linter", "markdown"]
