@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "zh-punct"
+version = "0.1.0"
+description = "中文排版体检：全半角混用、成对符号不闭合、重复标点、省略号破折号写法"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+authors = [{ name = "uppercrusteve" }]
+keywords = ["chinese", "typography", "punctuation", "linter", "markdown"]
+classifiers = [
+    "Environment :: Console",
+    "Natural Language :: Chinese (Simplified)",
+    "Programming Language :: Python :: 3",
+    "Topic :: Text Processing",
+]
+
+[project.urls]
+Homepage = "https://github.com/uppercrusteve/zh-punct"
+Issues = "https://github.com/uppercrusteve/zh-punct/issues"
+
+[project.scripts]
+zh-punct = "zh_punct.cli:main"
+
+[tool.setuptools]
+package-dir = { "" = "src" }
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py39"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
